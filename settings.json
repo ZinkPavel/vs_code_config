@@ -1,0 +1,29 @@
+{
+    // --- Python ---
+    "python.defaultInterpreterPath": "C:\\Python3107\\python.exe",
+
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=119",
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length=119"],
+
+    // Git
+    "git.enabled": false,
+
+    // Brackets
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": true,
+
+    // Other
+    "editor.renderWhitespace": "all",
+    "screencastMode.fontSize": 20,
+    "workbench.colorTheme": "Default Light+",
+    "telemetry.telemetryLevel": "error",
+    "security.workspace.trust.untrustedFiles": "open",
+
+    // LARGE_FILE_SIZE_THRESHOLD = 20 * 1024 * 1024; // 20 MB;
+    // LARGE_FILE_LINE_COUNT_THRESHOLD = 300 * 1000; // 300K lines
+    "editor.largeFileOptimizations": false,
+}
