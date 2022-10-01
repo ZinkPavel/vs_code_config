@@ -1,16 +1,22 @@
 {
     // --- Python ---
-    "python.defaultInterpreterPath": "C:\\Python3107\\python.exe",
-
-    "python.linting.enabled": true,
-    "python.linting.flake8Args": [
-        "--max-line-length=119",
-    ],
+    "python.defaultInterpreterPath": "C:\\Python\\python.exe",
     "python.formatting.provider": "black",
-    "python.formatting.blackArgs": ["--line-length=119"],
+    "editor.formatOnSave": false,
+    
+    // -- Starlark --
+    "bazel.buildifierExecutable": "C:\\Bazel\\buildifier.exe",
+    "files.associations": {
+        "*.bzl": "starlark",
+        "*.bazel": "starlark",
+    },
+    "[starlark]": {
+        "editor.formatOnSave": true,
+    },
+    "bazel.buildifierFixOnFormat": true,
 
     // Git
-    "git.enabled": false,
+    "git.enabled": true,
 
     // Brackets
     "editor.guides.bracketPairs": true,
@@ -19,11 +25,34 @@
     // Other
     "editor.renderWhitespace": "all",
     "screencastMode.fontSize": 20,
-    "workbench.colorTheme": "Default Light+",
     "telemetry.telemetryLevel": "error",
     "security.workspace.trust.untrustedFiles": "open",
-
+    "extensions.autoUpdate": "onlyEnabledExtensions",
     // LARGE_FILE_SIZE_THRESHOLD = 20 * 1024 * 1024; // 20 MB;
     // LARGE_FILE_LINE_COUNT_THRESHOLD = 300 * 1000; // 300K lines
     "editor.largeFileOptimizations": false,
+    "extensions.ignoreRecommendations": true,
+
+    // Terminal
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe",
+            ],
+            // "args": [
+            //     "/k", 
+            //     TODO: Path to VS Developer compiler
+            // ],
+            "icon": "terminal-cmd",
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+        },
+    },
 }
